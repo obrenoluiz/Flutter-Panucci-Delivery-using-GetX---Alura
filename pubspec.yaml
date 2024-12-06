@@ -1,0 +1,43 @@
+name: panucci_delivery
+description: "Flutter project for Panucci Delivery using GetX"
+publish_to: 'none' 
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.6
+  get: ^4.6.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.0
+
+flutter:
+
+  uses-material-design: true
+  assets:
+    - assets/images/caipirinha.jpg
+    - assets/images/chicken-salad.png
+    - assets/images/chicken-tender.png
+    - assets/images/chicken-tortilla.png
+    - assets/images/cold-noodles.png
+    - assets/images/coxinhas.png
+    - assets/images/fish-n-salsa.png
+    - assets/images/hamburger-ink.png
+    - assets/images/pamonha.png
+    - assets/images/penne-au-sugo.png
+    - assets/images/rice-n-beans.jpg
+    - assets/images/shrimp-n-rice.png
+    - assets/images/spagetti.png
+    - assets/images/steak-veggies.png
+    - assets/images/steak.png
+    - assets/images/tapioca-taco.jpg
+    - assets/images/lasagna-bolognese.jpg
+    - assets/images/visa.png
