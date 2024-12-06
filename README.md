@@ -1,16 +1,45 @@
-# panucci_delivery
+# 🚚 Flutter Panucci Delivery using GetX  
 
-A new Flutter project.
+Bem-vindo ao **Panucci Delivery**, um projeto desenvolvido em Flutter que simula um sistema de delivery moderno e funcional. Este projeto foi criado como parte do aprendizado do curso Alura, utilizando o poderoso gerenciamento de estado **GetX**.
 
-## Getting Started
+## 🖼️ Demonstração  
+<img src="assets/screenshots/home.png" alt="Tela inicial do aplicativo" width="300">  
 
-This project is a starting point for a Flutter application.
+> **Nota:** Para rodar o projeto localmente e visualizar todas as telas, siga as instruções abaixo.
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🚀 Funcionalidades  
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Gerenciamento de estado com GetX:** Simples e eficiente.  
+- **Interface responsiva:** Adaptável a diferentes tamanhos de tela.  
+- **Fluxo de navegação fluido:** Experiência do usuário aprimorada.  
+
+---
+
+## 🛠️ Tecnologias Utilizadas  
+
+- **Flutter**: Framework para desenvolvimento mobile.  
+- **GetX**: Gerenciamento de estado e rotas.  
+- **Dart**: Linguagem de programação.  
+
+---
+
+🏃‍♂️ Como Executar
+Clone este repositório:
+
+- ```git clone https://github.com/obrenoluiz/Flutter-Panucci-Delivery-using-GetX-Alura.git```
+- ```cd flutter-panucci-delivery```
+
+Instale as dependências:
+
+```flutter pub get```
+
+Execute o aplicativo:
+
+```flutter run```
+
+📝 Licença
+Este projeto está sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
+
+Desenvolvido com 💙 por Breno Luiz ~ Durante o curso da Alura.
