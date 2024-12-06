@@ -11,6 +11,7 @@ class PanucciDelivery extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData.from(
           colorScheme: ColorScheme.fromSeed(
             seedColor: const Color.fromARGB(255, 255, 83, 83),
