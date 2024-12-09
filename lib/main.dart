@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:panucci_delivery/screens/home.dart';
 import 'package:panucci_delivery/services/services_manager.dart';
 
@@ -35,7 +36,7 @@ class PanucciDelivery extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.from(
           colorScheme: ColorScheme.fromSeed(

@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:panucci_delivery/components/cartao/cartao_controller.dart';
+import 'package:panucci_delivery/utils/snackbars.dart';
 
 import '../../models/item.dart';
 
@@ -64,6 +65,7 @@ class _CartaoState extends State<Cartao> {
                         borderRadius: BorderRadius.circular(20),
                         onTap: () {
                           controller.decrement();
+                          Snackbars.getRemoveItem(widget.item);
                         },
                         child: const Icon(
                           Icons.remove_circle_outline,
@@ -75,6 +77,7 @@ class _CartaoState extends State<Cartao> {
                         borderRadius: BorderRadius.circular(20),
                         onTap: () {
                           controller.increment();
+                          Snackbars.getAddItem(widget.item);
                         },
                         child: const Icon(
                           Icons.add_circle_outline,
