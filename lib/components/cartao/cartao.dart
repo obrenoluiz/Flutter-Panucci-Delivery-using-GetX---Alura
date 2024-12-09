@@ -64,8 +64,10 @@ class _CartaoState extends State<Cartao> {
                       InkWell(
                         borderRadius: BorderRadius.circular(20),
                         onTap: () {
-                          controller.decrement();
-                          Snackbars.getRemoveItem(widget.item);
+                          if (controller.counter.value > 0) {
+                            controller.decrement();
+                            Snackbars.getRemoveItem(widget.item);
+                          }
                         },
                         child: const Icon(
                           Icons.remove_circle_outline,
