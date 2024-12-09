@@ -8,6 +8,7 @@ class Snackbars {
         title: "Item adicionado!",
         message: "${item.nome} foi adicionado ao carrinho.",
         duration: const Duration(seconds: 2),
+        snackPosition: SnackPosition.TOP,
       ),
     );
   }
@@ -18,6 +19,18 @@ class Snackbars {
         title: "Item removido!",
         message: "${item.nome} foi removido do seu carrinho.",
         duration: const Duration(seconds: 2),
+        snackPosition: SnackPosition.TOP,
+      ),
+    );
+  }
+
+  static getPayment() {
+    return Get.showSnackbar(
+      const GetSnackBar(
+        title: "Pagamento realizado!",
+        message: "Obrigado pela preferência.",
+        duration: Duration(seconds: 2),
+        snackPosition: SnackPosition.TOP,
       ),
     );
   }

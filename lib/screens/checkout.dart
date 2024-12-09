@@ -1,15 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:panucci_delivery/components/order_item.dart';
+import 'package:panucci_delivery/controllers/carrinho_controller.dart';
+import 'package:panucci_delivery/screens/home.dart';
+import 'package:panucci_delivery/utils/snackbars.dart';
 import '../components/payment_method.dart';
 import '../components/payment_total.dart';
 
 class Checkout extends StatelessWidget {
-  const Checkout({Key? key, required this.homeContext}) : super(key: key);
-  final BuildContext homeContext;
+  Checkout({super.key});
+
+  final CarrinhoController carrinhoController = Get.find();
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Theme.of(context).colorScheme.surfaceTint,
+          title: const Text("Checkout"),
+          leading: IconButton(
+              icon: const Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pop(context);
+              }),
+        ),
         body: Padding(
           padding: const EdgeInsets.all(16.0),
           child: CustomScrollView(
@@ -24,8 +39,9 @@ class Checkout extends StatelessWidget {
                 ),
               ),
               SliverList(
-                  delegate: SliverChildBuilderDelegate((context, index) {},
-                      childCount: 1)),
+                  delegate: SliverChildBuilderDelegate((context, index) {
+                return OrderItem(item: carrinhoController.carrinho[index]);
+              }, childCount: carrinhoController.carrinho.length)),
               const SliverToBoxAdapter(
                 child: Padding(
                   padding: EdgeInsets.only(bottom: 8.0),
@@ -47,17 +63,24 @@ class Checkout extends StatelessWidget {
                   ),
                 ),
               ),
-              const SliverToBoxAdapter(child: PaymentTotal(total: 00.00),),
+              SliverToBoxAdapter(
+                child: PaymentTotal(total: carrinhoController.total.value),
+              ),
               SliverFillRemaining(
                 hasScrollBody: false,
                 child: Align(
                     alignment: Alignment.bottomCenter,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.offAll(() => Home());
+                        Snackbars.getPayment();
+                        carrinhoController.cleanCart();
+                      },
                       style: ElevatedButton.styleFrom(
                           elevation: 0,
                           foregroundColor: Colors.white,
-                          backgroundColor: Theme.of(context).colorScheme.surfaceTint),
+                          backgroundColor:
+                              Theme.of(context).colorScheme.surfaceTint),
                       child: const Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
